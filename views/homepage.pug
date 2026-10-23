@@ -1,0 +1,21 @@
+doctype html
+html
+  head
+    title= title
+    link(rel="stylesheet", href="/css/style.css")
+  body
+    h1 Snuff
+    a(href="/update-cobj") Add to this table
+    table
+      thead
+        tr
+          th Name
+          th Manufacturer
+          th Nicotine strength (mg/g)
+      tbody
+        each record in records
+          tr
+            td= record.properties.name
+            td= record.properties.manufacturer
+            td= record.properties.nicotine_strength
+            

@@ -1,0 +1,17 @@
+doctype html
+html
+  head
+    title= title
+    link(rel="stylesheet", href="/css/style.css")
+  body
+    h1 Add a new snuff
+    form(method="POST", action="/update-cobj")
+      label(for="name") Name
+      input(type="text", id="name", name="name", required)
+      label(for="manufacturer") Manufacturer
+      input(type="text", id="manufacturer", name="manufacturer")
+      label(for="nicotine_strength") Nicotine strength (mg/g)
+      input(type="number", id="nicotine_strength", name="nicotine_strength", step="0.1")
+      button(type="submit") Create
+    a(href="/") Return to the homepage
+    
